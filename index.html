@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenil Shah | Full Stack Engineer & Data Scientist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Particles.js for background effects -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Typed.js for typing animation -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- GSAP for advanced animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+    
+    <!-- 3D Grid Floor -->
+    <div class="grid-floor"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-text">JS</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">Jenil Shah</h1>
+                <div class="hero-title-wrapper">
+                    <span class="hero-title-static">I'm a </span>
+                    <span class="hero-title-typed" id="typed-text"></span>
+                    <span class="typed-cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Building intelligent systems at the intersection of <span class="highlight">AI/ML</span> and 
+                    <span class="highlight">Software Engineering</span>. Passionate about creating scalable 
+                    solutions that make a real impact.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Get in Touch</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        <span>View Projects</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">4.0</span>
+                        <span class="stat-label">GPA</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Years Internship</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="profile-card glass-card">
+                    <div class="profile-image-wrapper">
+                        <div class="profile-image-glow"></div>
+                        <img src="jenil-photo.png" alt="Jenil Shah" class="profile-image">
+                        <div class="profile-image-ring"></div>
+                    </div>
+                    <div class="profile-info">
+                        <h3>Jenil Shah</h3>
+                        <p>MS Computer Science @ Cal State LA</p>
+                        <p class="graduating">
+                            <i class="fas fa-calendar-check"></i>
+                            Graduating May 2026
+                        </p>
+                    </div>
+                    <div class="profile-links">
+                        <a href="https://linkedin.com/in/jenilshah11/" target="_blank" aria-label="LinkedIn" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span class="social-tooltip">LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/jenilashah311" target="_blank" aria-label="GitHub" class="social-link">
+                            <i class="fab fa-github"></i>
+                            <span class="social-tooltip">GitHub</span>
+                        </a>
+                        <a href="mailto:jenilashah1201@gmail.com" aria-label="Email" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                            <span class="social-tooltip">Email</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Floating Elements -->
+                <div class="floating-elements">
+                    <div class="floating-icon" style="--delay: 0s; --x: -80px; --y: -60px;">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="floating-icon" style="--delay: 1s; --x: 100px; --y: -40px;">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="floating-icon" style="--delay: 2s; --x: 120px; --y: 80px;">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="floating-icon" style="--delay: 0.5s; --x: -100px; --y: 60px;">
+                        <i class="fab fa-react"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Turning Data into Decisions</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        I'm a <strong>Full Stack Engineer</strong> and <strong>Data Scientist</strong> currently 
+                        pursuing my Master's in Computer Science at California State University, Los Angeles with a 
+                        <strong>perfect 4.0 GPA</strong>.
+                    </p>
+                    <p>
+                        With experience spanning from architecting RAG-based AI systems to building real-time 
+                        fraud detection pipelines, I specialize in creating intelligent, scalable solutions 
+                        that bridge the gap between cutting-edge ML research and production-ready applications.
+                    </p>
+                    <p>
+                        Currently working as a <strong>Full Stack Engineer Co-op at Drive Health</strong>, 
+                        where I've reduced AI inference latency from minutes to milliseconds and improved 
+                        patient-education accuracy by 20% through innovative retrieval systems.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-brain"></i>
+                            <span>AI/ML Systems</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-database"></i>
+                            <span>Data Engineering</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-code"></i>
+                            <span>Full Stack Development</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Predictive Analytics</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-education">
+                    <h3>Education</h3>
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-details">
+                            <h4>California State University, Los Angeles</h4>
+                            <p class="degree">Master of Science in Computer Science</p>
+                            <p class="edu-meta">
+                                <span><i class="fas fa-calendar"></i> Aug 2024 – May 2026</span>
+                                <span><i class="fas fa-star"></i> GPA: 4.0/4.0</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-details">
+                            <h4>Charusat University</h4>
+                            <p class="degree">Bachelor of Technology in Computer Science</p>
+                            <p class="edu-meta">
+                                <span><i class="fas fa-calendar"></i> Jan 2020 – May 2024</span>
+                                <span><i class="fas fa-star"></i> GPA: 3.9/4.0</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Work Experience</span>
+                <h2 class="section-title">Where I've Made an Impact</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker current">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Full Stack Engineer Co-op</h3>
+                                <p class="company">Drive Health</p>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="badge current-badge">Current</span>
+                                <span class="date">May 2025 – Present</span>
+                                <span class="location"><i class="fas fa-map-marker-alt"></i> Gilbert, AZ</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-achievements">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Architected a <strong>RAG-based retrieval system</strong> with Pinecone and FAISS to eliminate AI hallucinations, increasing patient-education accuracy by <strong>20%</strong></span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Refactored inference and retrieval pipelines to reduce latency from <strong>several minutes to 200ms</strong>, supporting real-time medical Q&A at scale with <strong>38% faster</strong> response times</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Transformed patient feedback collection through an automated <strong>Twilio-based LiveKit platform</strong> with Prometheus and Grafana analytics, cutting review time by <strong>45%</strong></span>
+                            </li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span>RAG</span>
+                            <span>Pinecone</span>
+                            <span>FAISS</span>
+                            <span>Twilio</span>
+                            <span>Prometheus</span>
+                            <span>Grafana</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Research Assistant</h3>
+                                <p class="company">California State University, Los Angeles</p>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="date">Sep 2024 – Apr 2025</span>
+                                <span class="location"><i class="fas fa-map-marker-alt"></i> Los Angeles, CA</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-achievements">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Analyzed <strong>5,000+ student records</strong> to identify at-risk populations by developing predictive models in Python, reaching <strong>85% accuracy</strong> in forecasting dropout risk</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Designed an optimized data collection framework across <strong>12 departments</strong>, boosting response rates by <strong>39%</strong> through strategic timing and follow-up protocols</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Translated complex statistical findings into actionable recommendations, presenting to <strong>20+ stakeholders</strong> and securing <strong>$50K</strong> in retention program funding</span>
+                            </li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span>Python</span>
+                            <span>scikit-learn</span>
+                            <span>Data Analysis</span>
+                            <span>Predictive Modeling</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Data Science Intern</h3>
+                                <p class="company">TechXi</p>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="date">Jan 2023 – Jun 2024</span>
+                                <span class="location"><i class="fas fa-map-marker-alt"></i> Vadodara, India</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-achievements">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Developed a <strong>multi-speaker speech recognition system</strong> using deep learning to isolate overlapping voices, delivering <strong>85% accuracy</strong> in separating concurrent speech</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Cut transcription error rates by <strong>30%</strong> through integration of n-gram language models and streamlined audio preprocessing pipelines</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Implemented spectral subtraction and MFCC-based denoising, sustaining <strong>90% recognition accuracy</strong> in high-noise conditions</span>
+                            </li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span>Deep Learning</span>
+                            <span>NLP</span>
+                            <span>Speech Recognition</span>
+                            <span>Signal Processing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>AI-ML Team Lead</h3>
+                                <p class="company">Charusat Development Club</p>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="date">Jul 2021 – Jul 2022</span>
+                                <span class="location"><i class="fas fa-map-marker-alt"></i> Rajkot, India</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-achievements">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Developed a real-time <strong>face-mask detection system</strong> using TensorFlow/Keras and OpenCV, achieving <strong>95%+ detection accuracy</strong></span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Trained a custom CNN model with data augmentation and lighting-robust preprocessing, improving robustness across <strong>3+ real-world lighting conditions</strong></span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Deployed the system at <strong>5+ live events</strong> to automate mask-compliance checks, reducing manual monitoring effort by <strong>40%</strong></span>
+                            </li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span>TensorFlow</span>
+                            <span>Keras</span>
+                            <span>OpenCV</span>
+                            <span>CNN</span>
+                            <span>Computer Vision</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Featured Projects</span>
+                <h2 class="section-title">What I've Built</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Financial Risk Prediction</h3>
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Real-time fraud detection solution using Gradient Boosting and Autoencoder models 
+                            with streaming data pipelines for instant transaction analysis.
+                        </p>
+                        <ul class="project-achievements">
+                            <li><strong>94%</strong> detection accuracy with <strong>28%</strong> fewer false positives</li>
+                            <li><strong>35%</strong> faster processing with Kafka/Spark pipelines</li>
+                            <li>Real-time monitoring with Grafana dashboards</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Kafka</span>
+                            <span>Spark</span>
+                            <span>FastAPI</span>
+                            <span>Grafana</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Retail Demand Forecasting</h3>
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Enterprise-scale demand forecasting system with dynamic pricing engine, 
+                            processing millions of transactions for inventory optimization.
+                        </p>
+                        <ul class="project-achievements">
+                            <li>Processed <strong>10M+</strong> transactions with <strong>92%</strong> accuracy</li>
+                            <li>Reduced overstock by <strong>25%</strong> using LSTM and XGBoost</li>
+                            <li>Increased profit margins by <strong>12%</strong> with RL-based pricing</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>XGBoost</span>
+                            <span>LSTM</span>
+                            <span>AWS</span>
+                            <span>Airflow</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Context-Aware Conversational AI</h3>
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Production-ready conversational AI platform with semantic retrieval and 
+                            context-aware dialogue management, outperforming baseline GPT models.
+                        </p>
+                        <ul class="project-achievements">
+                            <li><strong>38%</strong> improvement in multi-turn conversation quality</li>
+                            <li>Scaled to <strong>10K+ concurrent users</strong></li>
+                            <li>Reduced latency from <strong>2s to 500ms</strong> with Redis caching</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span>PyTorch</span>
+                            <span>Transformers</span>
+                            <span>Redis</span>
+                            <span>FastAPI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Technical Skills</span>
+                <h2 class="section-title">My Tech Stack</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary">Python</span>
+                        <span class="skill-tag primary">SQL</span>
+                        <span class="skill-tag">R</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Scala</span>
+                        <span class="skill-tag">Shell</span>
+                        <span class="skill-tag">Java</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>ML/DL Frameworks</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary">PyTorch</span>
+                        <span class="skill-tag primary">TensorFlow</span>
+                        <span class="skill-tag">scikit-learn</span>
+                        <span class="skill-tag">Keras</span>
+                        <span class="skill-tag">XGBoost</span>
+                        <span class="skill-tag">LightGBM</span>
+                        <span class="skill-tag">HuggingFace</span>
+                        <span class="skill-tag">CatBoost</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <i class="fas fa-chart-pie"></i>
+                        <h3>Data Science</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary">Pandas</span>
+                        <span class="skill-tag primary">NumPy</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Seaborn</span>
+                        <span class="skill-tag">Plotly</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">SciPy</span>
+                        <span class="skill-tag">Statsmodels</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <i class="fas fa-comments"></i>
+                        <h3>NLP & RAG</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary">LangChain</span>
+                        <span class="skill-tag primary">FAISS</span>
+                        <span class="skill-tag">Pinecone</span>
+                        <span class="skill-tag">SpaCy</span>
+                        <span class="skill-tag">NLTK</span>
+                        <span class="skill-tag">Sentence-Transformers</span>
+                        <span class="skill-tag">Weaviate</span>
+                        <span class="skill-tag">Anthropic</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <i class="fas fa-cogs"></i>
+                        <h3>MLOps & Infrastructure</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary">Docker</span>
+                        <span class="skill-tag primary">Kubernetes</span>
+                        <span class="skill-tag">MLflow</span>
+                        <span class="skill-tag">Airflow</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">Kafka</span>
+                        <span class="skill-tag">Spark</span>
+                        <span class="skill-tag">Terraform</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Deployment & Monitoring</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag primary">FastAPI</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">Prometheus</span>
+                        <span class="skill-tag">Grafana</span>
+                        <span class="skill-tag">GitHub Actions</span>
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">Datadog</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get in Touch</span>
+                <h2 class="section-title">Let's Work Together</h2>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-form-container">
+                    <h3>Send Me a Message</h3>
+                    <p class="form-intro">Have a question or want to work together? Drop me a message!</p>
+                    <form id="contact-form" class="contact-form" action="https://formsubmit.co/36c910ed7754b261525aa321fb6f8801" method="POST">
+                        <input type="hidden" name="_subject" value="New Contact from Portfolio Website!">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="http://localhost:8888/thanks.html">
+                        
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Job Opportunity / Project Inquiry" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Hi Jenil, I'd like to discuss..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large btn-submit">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                    <div id="form-status" class="form-status"></div>
+                </div>
+                
+                <div class="contact-info-side">
+                    <h3>Contact Information</h3>
+                    <p class="contact-intro">
+                        I'm currently open to new opportunities and would love to hear from you!
+                    </p>
+                    <div class="contact-cards-vertical">
+                        <a href="mailto:jenilashah1201@gmail.com" class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>jenilashah1201@gmail.com</p>
+                            </div>
+                        </a>
+                        <a href="tel:323-212-1218" class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <p>323-212-1218</p>
+                            </div>
+                        </a>
+                        <a href="https://linkedin.com/in/jenilshah11/" target="_blank" class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>LinkedIn</h4>
+                                <p>linkedin.com/in/jenilshah11</p>
+                            </div>
+                        </a>
+                        <a href="https://github.com/Jenil311" target="_blank" class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>GitHub</h4>
+                                <p>github.com/Jenil311</p>
+                            </div>
+                        </a>
+                    </div>
+                    <a href="Jenil_Resume.pdf" download class="btn btn-secondary btn-large btn-download">
+                        <i class="fas fa-download"></i>
+                        <span>Download Resume</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">JS</span>
+                    <p>Building intelligent systems for tomorrow.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://linkedin.com/in/jenilshah11/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Jenil311" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:jenilashah1201@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jenil Shah. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
